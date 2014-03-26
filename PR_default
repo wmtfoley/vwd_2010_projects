@@ -1,0 +1,101 @@
+<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+    CodeBehind="Default.aspx.cs" Inherits="PurchaseReq._Default" %>
+
+<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+</asp:Content>
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+
+    <div id="mainForm" class="grid_11 formBlock">
+        <h2><br />
+            Online Purchase Requisition Form for Capital and Minor Equipment
+        </h2>
+    </div>
+    <div class="clear"></div>
+    <div class="grid_11 formBlock">
+        <div class="grid_3 alpha">
+            <h1>Step 1.</h1>
+            <p>Create a unique identifier for your Purchase Requisition</p>
+        </div>
+        <div id="requisition" class="grid_5">
+            <table>
+                <tr>
+                    <td>
+                        <label>
+                            Requisition number:
+                        </label>
+                    </td>
+                    <td>
+                        <asp:TextBox runat="server" ID="requisitionNumber">
+                        </asp:TextBox>
+                    </td>
+
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <p>
+                            Enter your initials, date (yymmdd) and requisition number sent that day e.g. KW0407291. Please keep a copy of the PR and quote the PR in any follow up.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="grid_11 formBlock">
+        <div class="grid_3 alpha">
+            <h1>Step 2.</h1>
+            <p>What is this requisition for?</p>
+        </div>
+        <div id="Div1" class="grid_5">
+            <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                <asp:ListItem>Approved Capital equipment over $5,000</asp:ListItem>
+                <asp:ListItem>Minor Equipment less than $5,000</asp:ListItem>
+                <asp:ListItem>Faxes / copiers</asp:ListItem>
+                <asp:ListItem>Service contracts for Equipment</asp:ListItem>
+            </asp:RadioButtonList>
+        </div>
+    </div>
+        <div class="grid_11 formBlock">
+        <div class="grid_3 alpha">
+            <h1>Step 3.</h1>
+            <p>Enter the requestor's contact information:</p>
+        </div>
+        <div id="Div2" class="grid_5">
+            <table>
+                <tr>
+                    <td>
+                        <label>
+                            Name:
+                        </label>
+                    </td>
+                    <td>
+                        <asp:TextBox runat="server" ID="requestorName">
+                        </asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Department:
+                        </label>
+                    <td>
+                        <asp:TextBox runat="server" ID="requestorDepartment">
+                        </asp:TextBox>
+                    </td>
+                </tr>
+                                <tr>
+                    <td>
+                        <label>
+                            Phone number:
+                        </label>
+                    <td>
+                        <asp:TextBox runat="server" ID="reqestorPhone">
+                        </asp:TextBox>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</asp:Content>
