@@ -95,6 +95,16 @@
                         </asp:TextBox>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Email:
+                        </label>
+                    <td>
+                        <asp:TextBox runat="server" ID="requestorEmail">
+                        </asp:TextBox>
+                    </td>
+                </tr>
             </table>
         </div>
     </div>
